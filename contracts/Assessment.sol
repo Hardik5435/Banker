@@ -1,9 +1,9 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
 //import "hardhat/console.sol";
 
-contract Assessment {
+contract Hello {
     address payable public owner;
     uint256 public balance;
 
@@ -21,17 +21,13 @@ contract Assessment {
 
     function deposit(uint256 _amount) public payable {
         uint _previousBalance = balance;
-
-        // make sure this is the owner
         require(msg.sender == owner, "You are not the owner of this account");
-
-        // perform transaction
         balance += _amount;
 
         // assert transaction completed successfully
         assert(balance == _previousBalance + _amount);
 
-        // emit the event
+
         emit Deposit(_amount);
     }
 
@@ -48,13 +44,11 @@ contract Assessment {
             });
         }
 
-        // withdraw the given amount
         balance -= _withdrawAmount;
 
         // assert the balance is correct
         assert(balance == (_previousBalance - _withdrawAmount));
 
-        // emit the event
         emit Withdraw(_withdrawAmount);
     }
 }
