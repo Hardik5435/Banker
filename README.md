@@ -10,3 +10,22 @@ After cloning the github, you will want to do the following to get the code runn
 
 After this, the project will be running on your localhost. 
 Typically at http://localhost:3000/
+
+
+# Explanation
+
+In solidity create file name assessment.sol then create contracts, events, and three functions.
+
+Then create javascript file to create frontend of that file so you could deploy it to fontend  actually use it.
+
+Then create css file to give styling to the javascript file.
+
+At the end you will be able to retrieve your result
+
+## Authors
+
+Hardik Madaan
+
+## License
+
+This project is licensed under the MIT License 
